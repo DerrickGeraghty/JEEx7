@@ -1,5 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/declarativemethods.jspf" %>
+<%	
+	if(request.getParameter("btnLogOut") != null){
+		session.removeAttribute("authenticatedUser");
+		session.removeAttribute("authenticated");
+		
+	}
+%>
 
 
 <!DOCTYPE html>
